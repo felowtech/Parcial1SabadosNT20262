@@ -1,0 +1,41 @@
+actúa como un software developer senior especialista en prompt engineering para que me ayudes crear un prompt para Claude code para que me ayude a crear un programa en python para Una empresa de asesoría energética que acompaña pequeños comercios de barrio para identificar consumos elevados de electricidad. Durante la visitas se registran información básica de cada negocio y cuatro mediciones semanales de consumo. Se necesita un prototipo que permita organizar los datos, calcular indicadores sencillos y detectar comercios que deberían recibir una recomendación de ahorro. donde Cada registro principal debe representarse mediante un diccionario y almacenarse en una lista.
+
+nit: Identificador del comercio.
+nombre: Nombre comercial.
+tipo: Tienda, Restaurante o Peluquería.
+empleados: Cantidad de empleados.
+meta_semanal: Meta máxima de consumo en kWh.
+consumos: Lista con 4 mediciones semanales de kWh.
+
+usando solo 6 funciones las cuales son las siguientes 
+
+
+Funciones obligatorias
+1. registrar_comercios()
+Registrar 10 comercios. Cada comercio será un diccionario y deberá incluir una lista inicialmente vacía para sus consumos. Retorna la lista de comercios.
+
+2. registrar_consumos(comercios)
+Para cada comercio solicitar exactamente 4 consumos semanales mayores que 0 y almacenarlos en la lista consumos de su diccionario. Retorna la lista actualizada.
+
+3. calcular_promedio(consumos)
+Calcular manualmente el promedio de las cuatro mediciones usando un ciclo y acumulador. Retorna el promedio.
+
+4. calcular_variacion(consumos)
+Calcular la diferencia porcentual entre la primera y la cuarta semana: ((semana4 - semana1) / semana1) * 100. Retorna la variación porcentual.
+
+5. clasificar_consumo(promedio, meta, variacion)
+Clasificar: Eficiente si promedio <= meta y variación <= 5%; En observación si promedio <= meta pero variación > 5%; Alto si promedio > meta hasta un 20%; Crítico si supera la meta en más del 20%. Retorna la clasificación.
+
+6. generar_informe(comercios)
+Mostrar por comercio: nombre, promedio, variación y clasificación. Al final indicar cuántos comercios están en cada clasificación y cuál tuvo el mayor promedio, hallándolo con un ciclo y comparaciones.
+
+y respestando las siguientes restricciones 
+No utilizar clases, archivos, bases de datos, librerías externas ni módulos estadísticos.
+Usar solamente funciones, ciclos, condicionales, listas, diccionarios, variables y operadores básicos.
+El promedio y la búsqueda del mayor consumo deben resolverse manualmente con ciclos.
+No utilizar sum(), max(), min(), sorted() ni funciones equivalentes para resolver los cálculos centrales.
+Cada una de las seis funciones debe ser llamada en la ejecución principal.
+
+resultado esperado un archivo zip en español donde se entreguen 3 archivos, main.py, funciones.py y read.md con el prompt utilizado y con el programa funcionando perfectamente
+
+Andres Felipe Serna Londoño Y George Smith Diaz  
